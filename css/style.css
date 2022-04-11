@@ -1,0 +1,33 @@
+body{
+    background-color: #cecece;
+}
+header{
+    background-color: white;
+}
+header h1{
+    font-size: 3.5rem;
+    color: lightcoral;
+}
+header .select-container{
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: lightblue;
+}
+
+main .card{
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    background-color: white;
+}
+main .card-wrapper{
+    font-size: 4rem;
+}
+main span{
+    margin-top: -5%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
