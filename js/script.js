@@ -1,20 +1,3 @@
-/*
-html da generare tramite js
-
-<div class="container pt-5">
-                <div class="row gy-5">
-                    <div class="col-3">
-                        <div class="card d-flex justify-content-center rounded-pill">
-                            <div class="card-wrapper">
-                                <i class="fa-solid fa-fish"></i>
-                                <span class="d-block">fish</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-*/
-
 // funzione per generare numeri casuali
 
 function getRandomInt(min, max) {
@@ -140,13 +123,7 @@ const cards = [
 	}
 ];
 
-(function (){
-    const appElm = document.getElementById('app');
-    const containerElm = document.createElement('div');
-    containerElm.classList.add('container', 'pt-5');
-    const rowElm = document.createElement('div');
-    rowElm.classList.add('row', 'gy-5');
-    
+// METODO NON FUNZIONALE
     // cards.forEach((element)=> {
     //     const colElm = document.createElement('div');
     //     colElm.classList.add('col-3');
@@ -161,7 +138,6 @@ const cards = [
     //     const spanElm = document.createElement('span');
     //     spanElm.classList.add('d-block');
     //     spanElm.textContent = `${element.name}`;
-
     //     cardWrapperElm.append(i)
     //     cardWrapperElm.append(spanElm)
     //     cardElm.append(cardWrapperElm)
@@ -169,8 +145,15 @@ const cards = [
     //     rowElm.append(colElm);
     //     containerElm.append(rowElm);
     //     appElm.append(containerElm);    
-        
     // })
+
+
+(function (){
+    const appElm = document.getElementById('app');
+    const containerElm = document.createElement('div');
+    containerElm.classList.add('container', 'pt-5');
+    const rowElm = document.createElement('div');
+    rowElm.classList.add('row', 'gy-5');
 
         function creaCards(cards) {
             let card = '';
@@ -214,5 +197,5 @@ const cards = [
 
     containerElm.append(rowElm);
     appElm.append(containerElm);   
-    
+
 })();
