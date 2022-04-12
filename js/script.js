@@ -143,9 +143,9 @@ const cards = [
     //     cardElm.append(cardWrapperElm)
     //     colElm.append(cardElm);
     //     rowElm.append(colElm);
-    //     containerElm.append(rowElm);
-    //     appElm.append(containerElm);    
     // })
+	//     containerElm.append(rowElm);
+    //     appElm.append(containerElm);    
 
 
 (function (){
@@ -156,6 +156,7 @@ const cards = [
     rowElm.classList.add('row', 'gy-5');
 
         function creaCards(cards) {
+			rowElm.innerHTML = '';
             let card = '';
             cards.forEach((element)=> {
             card += `
@@ -170,10 +171,11 @@ const cards = [
             `;
             return card;
         })
-         rowElm.innerHTML += card;
+         rowElm.innerHTML = card;
+		 console.log(rowElm.innerHTML = card)
     };
 
-    creaCards(cards);
+    creaCards(cards); //altrimenti parte vuota!
 
     let selezione = document.getElementById('scelta');
 
@@ -182,16 +184,12 @@ const cards = [
 	let tipo = selezione.value;
 
 	if(tipo === "animal"){
-		rowElm.innerHTML = "";
 		creaCards(cards.filter((element) => element.type === "animal"));
     }else if(tipo === "all"){
-		rowElm.innerHTML = "";
 		creaCards(cards);
 	} else if (tipo === "vegetable"){
-		rowElm.innerHTML = "";
 		creaCards(cards.filter((element) => element.type === "vegetable"));
 	}else if(tipo === "user"){
-		rowElm.innerHTML = "";
 		creaCards(cards.filter((element) => element.type === "user"));
 }})
 
